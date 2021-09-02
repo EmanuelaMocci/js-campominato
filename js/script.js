@@ -7,17 +7,26 @@ function randomNumeri(min, max){
 } 
 
 var casuali = randomNumeri(1, 100);
-console.log(casuali);
-
-
-for(var i = 0; i < 16; i++){
-    var casuali = randomNumeri(1, 100);
-    console.log(casuali);
-}
 
 // I numeri non possono essere duplicati.
 
-var n = [];
+// fintantochè la lunhezza l'array delle bombe è < di 16
+// genera un numero casuale e
+// se NON è presente nell'array delle bombe allora inseriscilo
+// ciclo while invece che ciclo for
+
+var bombe = [];
+
+while (bombe.length < 16) {
+    // genero un numero casuale
+    var casuali = randomNumeri(1, 100);
+    // se non e' incluso nell'array bome allora lo pusho dentro
+    if (bombe.includes(casuali) == false){
+        bombe.push(casuali);
+    }
+  } console.log(bombe);
+
+
 
 
 
