@@ -28,14 +28,12 @@ while (bombe.length < 16) {
 
 
 
-
-
-
-
-
-
 // In seguito il giocatore clicca sulle celle numerate (non può cliccare più volte sulla stessa cella)
 
+for (var i = 1; i <= 100; i++) {
+    document.getElementById("contenitore").innerHTML += `<div class="quadrato">${i}</div>`;
+}
+    
 
 // La partita termina quando il giocatore clicca su un numero “vietato” o clicca su tutte le celle che non sono delle bombe.
 
@@ -43,7 +41,7 @@ while (bombe.length < 16) {
 // Al termine della partita il software deve comunicare il punteggio.
 
 
-
+// ---------------------------------------------------------------------------------------------------
 
 // // Chiedere all'utente di inserire il numero di celle di cui sarà composto il campo da gioco.
 // var celleUtente = parseInt(prompt("Inserisci il numero di celle desiderato"));
