@@ -6,7 +6,7 @@ function randomNumeri(min, max){
         return numeri;
 } 
 
-var casuali = randomNumeri(1, 100);
+var casuali = randomNumeri(1, 10);
 
 // I numeri non possono essere duplicati.
 
@@ -17,9 +17,9 @@ var casuali = randomNumeri(1, 100);
 
 var bombe = [];
 
-while (bombe.length < 16) {
+while (bombe.length < 2) {
     // genero un numero casuale
-    var casuali = randomNumeri(1, 100);
+    var casuali = randomNumeri(1, 10);
     // se non e' incluso nell'array bome allora lo pusho dentro
     if (bombe.includes(casuali) == false){
         bombe.push(casuali);
@@ -29,11 +29,33 @@ while (bombe.length < 16) {
 
 
 // In seguito il giocatore clicca sulle celle numerate (non può cliccare più volte sulla stessa cella)
+// La partita termina quando il giocatore clicca su un numero “vietato” o clicca su tutte le celle che non sono delle bombe.
 
-for (var i = 1; i <= 100; i++) {
+for (var i = 1; i <= 10; i++) {
     document.getElementById("contenitore").innerHTML += `<div class="quadrato">${i}</div>`;
 }
-    
+
+document.getElementById("contenitore").addEventListener("click", 
+
+    function(evento) {
+
+        if (bombe.includes(evento.target.innerHTML) == true){
+            // alert("Hai preso la bomba!");
+            evento.target.classList.add('rosso');
+        } 
+        else {  evento.target.classList.add('verde');
+                // alert("Sei salvo, per ora..");
+        }       
+}
+); 
+
+  
+
+
+
+
+
+
 
 // La partita termina quando il giocatore clicca su un numero “vietato” o clicca su tutte le celle che non sono delle bombe.
 
