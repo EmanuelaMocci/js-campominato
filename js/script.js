@@ -9,36 +9,20 @@ function randomNumeri(min, max){
 var casuali = randomNumeri(1, 100);
 console.log(casuali);
 
+
 for(var i = 0; i < 16; i++){
     var casuali = randomNumeri(1, 100);
     console.log(casuali);
 }
 
-// var min = 1;
-// var max = 90;
-// //Number of numbers to extract
-// // var stop = 16;
-
-// var numbers = [];
-
-// for (let i = 0; i < 16; i++) {
-//   var n =  Math.floor(Math.random() * max) + min;
-//   var check = numbers.includes(n);
-  
-//   if(check === false) {
-//     numbers.push(n);
-//   } else {
-//     while(check === true){
-//       n = Math.floor(Math.random() * max) + min;
-//       check = numbers.includes(n);
-//         if(check === false){
-//           numbers.push(n);
-//         }
-//      }
-//   }
-// } console.log(numbers);
-
 // I numeri non possono essere duplicati.
+
+var n = [];
+
+
+
+
+
 
 
 // In seguito il giocatore clicca sulle celle numerate (non può cliccare più volte sulla stessa cella)
