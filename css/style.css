@@ -5,7 +5,18 @@
     padding: 0;
 }
 body{
-    margin-top: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+img{
+    height: 100px;
+    display: inline-block;
+}
+.img-2{
+    height: 90px;
 }
 #contenitore{
     max-width: 600px;
@@ -14,8 +25,8 @@ body{
     margin: auto;
 }
 .quadrato{
-    background-color: green;
-    border: 1px solid black;
+    background-color: #089861;
+    border: 1px solid green;
     height: 60px;
     width: 60px;
 }
@@ -27,6 +38,7 @@ body{
     background-position: center;
     background-size: cover;
 }
+
 /* h3{
     margin-top: 20px;
     text-align: center;
