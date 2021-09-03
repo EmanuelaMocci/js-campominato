@@ -16,10 +16,13 @@ var casuali = randomNumeri(1, 10);
 // ciclo while invece che ciclo for
 
 var bombe = [];
+var punteggio = [];
+var caselle = 10;
+var termine = randomNumeri - caselle;
 
 while (bombe.length < 1) {
     // genero un numero casuale
-    var casuali = randomNumeri(1, 10);
+    var casuali = randomNumeri(1, caselle);
     // se non e' incluso nell'array bome allora lo pusho dentro
     if (bombe.includes(casuali) == false){
         bombe.push(casuali);
@@ -31,11 +34,10 @@ while (bombe.length < 1) {
 // In seguito il giocatore clicca sulle celle numerate (non può cliccare più volte sulla stessa cella)
 // La partita termina quando il giocatore clicca su un numero “vietato” o clicca su tutte le celle che non sono delle bombe.
 
-for (var i = 1; i <= 10; i++) {
+for (var i = 1; i <= caselle; i++) {
     document.getElementById("contenitore").innerHTML += `<div class="quadrato">${i}</div>`; // Template literal
 }
 
-var punteggio = [];
 
 document.getElementById("contenitore").addEventListener("click", 
 
@@ -46,12 +48,15 @@ document.getElementById("contenitore").addEventListener("click",
         if (bombe.includes(squareClicked) == true){
             alert("Hai preso la bomba! Il tuo punteggio è " + punteggio.length);
             evento.target.classList.add('bomba-img');
+        } else if (punteggio.includes(squareClicked) == true) {
+            alert("Non puoi cliccare due volte nella stessa casella");
         } else if (bombe.includes(squareClicked) == false) {
                 alert("Hai ottenuto 1 punto");
                 evento.target.classList.add('verde');
                 punteggio.push(squareClicked);
-        }   
-    }      
+        } 
+    }
+        
         
 ); 
 
