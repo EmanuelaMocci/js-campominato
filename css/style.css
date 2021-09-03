@@ -17,9 +17,11 @@
     height: 100px;
     width: 100px;
 }
-.rosso{
-    background-color: red;
-}
 .verde{
     background-color: lightgreen;
+}
+.bomba-img{
+    background-image: url(../img/bomba.jpeg);
+    background-position: center;
+    background-size: cover;
 }

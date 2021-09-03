@@ -6,7 +6,7 @@ function randomNumeri(min, max){
         return numeri;
 } 
 
-var casuali = randomNumeri(1, 100);
+var casuali = randomNumeri(1, 10);
 
 // I numeri non possono essere duplicati.
 
@@ -17,9 +17,9 @@ var casuali = randomNumeri(1, 100);
 
 var bombe = [];
 
-while (bombe.length < 16) {
+while (bombe.length < 1) {
     // genero un numero casuale
-    var casuali = randomNumeri(1, 100);
+    var casuali = randomNumeri(1, 10);
     // se non e' incluso nell'array bome allora lo pusho dentro
     if (bombe.includes(casuali) == false){
         bombe.push(casuali);
@@ -31,9 +31,11 @@ while (bombe.length < 16) {
 // In seguito il giocatore clicca sulle celle numerate (non può cliccare più volte sulla stessa cella)
 // La partita termina quando il giocatore clicca su un numero “vietato” o clicca su tutte le celle che non sono delle bombe.
 
-for (var i = 1; i <= 100; i++) {
-    document.getElementById("contenitore").innerHTML += `<div class="quadrato">${i}</div>`;
+for (var i = 1; i <= 10; i++) {
+    document.getElementById("contenitore").innerHTML += `<div class="quadrato">${i}</div>`; // Template literal
 }
+
+var punteggio = [];
 
 document.getElementById("contenitore").addEventListener("click", 
 
@@ -42,57 +44,20 @@ document.getElementById("contenitore").addEventListener("click",
         var squareClicked = parseInt(evento.target.innerHTML);
 
         if (bombe.includes(squareClicked) == true){
-            alert("Hai preso la bomba!");
-            evento.target.classList.add('rosso');
-        } 
-        else {  evento.target.classList.add('verde');
-                alert("Complimenti, sei salvo!");
-                return evento;
-        }    
-}
+            alert("Hai preso la bomba! Il tuo punteggio è " + punteggio.length);
+            evento.target.classList.add('bomba-img');
+        } else if (bombe.includes(squareClicked) == false) {
+                alert("Hai ottenuto 1 punto");
+                evento.target.classList.add('verde');
+                punteggio.push(squareClicked);
+        }   
+    }      
+        
 ); 
 
-  
-
-
-
-
-
-
-
-// La partita termina quando il giocatore clicca su un numero “vietato” o clicca su tutte le celle che non sono delle bombe.
 
 
 // Al termine della partita il software deve comunicare il punteggio.
 
 
-// ---------------------------------------------------------------------------------------------------
-
-// // Chiedere all'utente di inserire il numero di celle di cui sarà composto il campo da gioco.
-// var celleUtente = parseInt(prompt("Inserisci il numero di celle desiderato"));
-
-// caselle(celleUtente);
-
-// // Tramite una funzione javascript disegnare in pagina la griglia con massimo 10 celle per riga.
-// // Crea un ciclo for per ripetere le celle
-
-// function caselle(celle) {
-//     for (var i = 1; i <= celle; i++) {
-//         document.getElementById("contenitore").innerHTML += `<div class="quadrato">${i}</div>`;
-//     }
-// }
-
-// // Al click su una cella dovrà essere mostrato con un alert il numero della cella e il suo background diventerà rosso.
-// // Crea il click con la funzione
-
-// document.getElementById("contenitore").addEventListener("click", 
-
-//      function(evento) {
-
-//         alert("Il numero della casella selezionata è " + (evento.target.innerHTML) );
-
-//         evento.target.classList.toggle('rosso');
-
-//         console.log(evento.target);
-// }); 
 
