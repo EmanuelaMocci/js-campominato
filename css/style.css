@@ -6,6 +6,9 @@
 }
 body{
     font-family: 'Josefin Sans', sans-serif;
+    background-image: url(../img/sfumato.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 h1{
     text-align: center;
@@ -23,14 +26,15 @@ img{
     flex-wrap: wrap;
     margin: auto;
 }
-.quadrato{
-    background-color: #089861;
-    border: 1px solid green;
+.quadrato{ 
+    background-color: #88CCA3;
+    border: 1px solid #089861;
     height: 60px;
     width: 60px;
 }
 .quadrato:hover{
     background-color: #A9D7C4;
+    /* transform: scale(1.05); */
 }
 .verde{
     background-color: lightgreen;

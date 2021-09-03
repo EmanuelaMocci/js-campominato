@@ -52,15 +52,14 @@ document.getElementById("contenitore").addEventListener("click",
         var squareClicked = parseInt(evento.target.innerHTML);
 
         if (bombe.includes(squareClicked) == true){
-            alert("Hai preso la bomba! Il tuo punteggio è " + punteggio.length);
+            alert("Hai preso la bomba! Hai ottenuto un punteggio totale pari a: " + punteggio.length);
             evento.target.classList.add('bomba-img');
             setTimeout(function(){
                 window.location.reload(1);
              }, 2000);
         } else if (punteggio.includes(squareClicked) == true) {
-            alert("Non puoi cliccare due volte nella stessa casella");
+            alert("Non puoi cliccare due volte nella stessa casella.");
         } else if (bombe.includes(squareClicked) == false) {
-                // alert("Hai ottenuto 1 punto");
                 evento.target.classList.add('verde');
                 punteggio.push(squareClicked);
         } if (punteggio.length == termine) {
