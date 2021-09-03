@@ -6,7 +6,7 @@ function randomNumeri(min, max){
         return numeri;
 } 
 
-var casuali = randomNumeri(1, 10);
+var casuali = randomNumeri(1, 100);
 
 // I numeri non possono essere duplicati.
 
@@ -16,9 +16,9 @@ var casuali = randomNumeri(1, 10);
 // ciclo while invece che ciclo for
 
 var bombe = [];
-var numeroBombe = 1;
+var numeroBombe = 16;
 var punteggio = [];
-var caselle = 10;
+var caselle = 100;
 var termine = caselle - numeroBombe;
 
 
@@ -53,7 +53,7 @@ document.getElementById("contenitore").addEventListener("click",
             evento.target.classList.add('bomba-img');
             setTimeout(function(){
                 window.location.reload(1);
-             }, 1000);
+             }, 2000);
         } else if (punteggio.includes(squareClicked) == true) {
             alert("Non puoi cliccare due volte nella stessa casella");
         } else if (bombe.includes(squareClicked) == false) {
@@ -64,7 +64,7 @@ document.getElementById("contenitore").addEventListener("click",
             alert("Complimenti, hai vinto!");
             setTimeout(function(){
                 window.location.reload(1);
-             }, 1000);
+             }, 2000);
         }
     } 
      

@@ -4,18 +4,20 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+    margin-top: 50px;
+}
 #contenitore{
-    max-width: 1000px;
-    margin: auto;
+    max-width: 600px;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
 }
 .quadrato{
     background-color: green;
     border: 1px solid black;
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
 }
 .verde{
     background-color: lightgreen;
