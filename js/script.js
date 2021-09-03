@@ -36,9 +36,12 @@ while (bombe.length < numeroBombe) {
 // In seguito il giocatore clicca sulle celle numerate (non può cliccare più volte sulla stessa cella)
 // La partita termina quando il giocatore clicca su un numero “vietato” o clicca su tutte le celle che non sono delle bombe.
 
+function griglia(celle){
 
-for (var i = 1; i <= caselle; i++) {
-    document.getElementById("contenitore").innerHTML += `<div class="quadrato">${i}</div>`; // Template literal
+    for (var i = 1; i <= celle; i++) {
+        document.getElementById("contenitore").innerHTML += `<div class="quadrato">${i}</div>`; // Template literal
+    }
+    
 }
 
 
@@ -70,14 +73,29 @@ document.getElementById("contenitore").addEventListener("click",
      
 ); 
 
+var facile = document.getElementById("facile");
+var intermedio = document.getElementById("intermedio");
+var difficile = document.getElementById("difficile");
 
-// var ricarica = document.getElementById("ricarica");
+facile.addEventListener("click",
+    function() {
+        celle = 100;
+        griglia(celle);
+    }
+);
+intermedio.addEventListener("click",
+    function() {
+        celle = 80;
+        griglia(celle);
+    }
+);
+difficile.addEventListener("click",
+    function() {
+        celle = 50;
+        griglia(celle);
+    }
+);
 
-// ricarica.addEventListener("click",
-//     function() {
-//         location.reload();
-//     }
-// );
 
 
 
