@@ -18,9 +18,8 @@ var casuali = randomNumeri(1, 10);
 var bombe = [];
 var punteggio = [];
 var caselle = 10;
-var termine = randomNumeri - caselle;
-var continuareSi = "si";
-var continuareNo = "no";
+var termine = caselle - bombe;
+
 
 while (bombe.length < 1) {
     // genero un numero casuale
@@ -50,8 +49,10 @@ document.getElementById("contenitore").addEventListener("click",
 
         if (bombe.includes(squareClicked) == true){
             alert("Hai preso la bomba! Il tuo punteggio è " + punteggio.length);
-            alert("Se desideri effettuare una nuova partita clicca sul bottone 'Ricarica'")
             evento.target.classList.add('bomba-img');
+            setTimeout(function(){
+                window.location.reload(1);
+             }, 1000);
         } else if (punteggio.includes(squareClicked) == true) {
             alert("Non puoi cliccare due volte nella stessa casella");
         } else if (bombe.includes(squareClicked) == false) {
@@ -59,9 +60,11 @@ document.getElementById("contenitore").addEventListener("click",
                 evento.target.classList.add('verde');
                 punteggio.push(squareClicked);
         } 
-    }
-        
-        
+        // if (punteggio.length == termine) {
+        //     alert("Complimenti, hai vinto");
+        // }
+    } 
+     
 ); 
 
 
