@@ -60,7 +60,7 @@ document.getElementById("contenitore").addEventListener("click",
         } else if (punteggio.includes(squareClicked) == true) {
             alert("Non puoi cliccare due volte nella stessa casella");
         } else if (bombe.includes(squareClicked) == false) {
-                alert("Hai ottenuto 1 punto");
+                // alert("Hai ottenuto 1 punto");
                 evento.target.classList.add('verde');
                 punteggio.push(squareClicked);
         } if (punteggio.length == termine) {

@@ -29,6 +29,9 @@ img{
     height: 60px;
     width: 60px;
 }
+.quadrato:hover{
+    background-color: #A9D7C4;
+}
 .verde{
     background-color: lightgreen;
 }
@@ -39,4 +42,20 @@ img{
 }
 .difficolta{
     margin-left: 15%;
+}
+button{
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #A5C7E8;
+    border: 1px solid #0EB3AF;
+}
+button a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+button:hover{
+    transform: scale(1.1);
+    background-color: lightblue;
 }
