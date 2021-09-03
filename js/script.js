@@ -16,12 +16,13 @@ var casuali = randomNumeri(1, 10);
 // ciclo while invece che ciclo for
 
 var bombe = [];
+var numeroBombe = 1;
 var punteggio = [];
 var caselle = 10;
-var termine = caselle - bombe;
+var termine = caselle - numeroBombe;
 
 
-while (bombe.length < 1) {
+while (bombe.length < numeroBombe) {
     // genero un numero casuale
     var casuali = randomNumeri(1, caselle);
     // se non e' incluso nell'array bome allora lo pusho dentro
@@ -59,22 +60,24 @@ document.getElementById("contenitore").addEventListener("click",
                 alert("Hai ottenuto 1 punto");
                 evento.target.classList.add('verde');
                 punteggio.push(squareClicked);
-        } 
-        // if (punteggio.length == termine) {
-        //     alert("Complimenti, hai vinto");
-        // }
+        } if (punteggio.length == termine) {
+            alert("Complimenti, hai vinto!");
+            setTimeout(function(){
+                window.location.reload(1);
+             }, 1000);
+        }
     } 
      
 ); 
 
 
-var ricarica = document.getElementById("ricarica");
+// var ricarica = document.getElementById("ricarica");
 
-ricarica.addEventListener("click",
-    function() {
-        location.reload();
-    }
-);
+// ricarica.addEventListener("click",
+//     function() {
+//         location.reload();
+//     }
+// );
 
 
 
