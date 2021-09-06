@@ -72,13 +72,13 @@ facile.addEventListener("click",
         griglia(celle);
         while (bombe.length < numeroBombe) {
             // genero un numero casuale
-            var casuali = randomNumeri(1, 100);
+            var casuali = randomNumeri(1, celle);
             // se non e' incluso nell'array bome allora lo pusho dentro
             if (bombe.includes(casuali) == false){
                 bombe.push(casuali);
             }
           } console.log(bombe);
-          bombe = [];
+   
     }
 );
 intermedio.addEventListener("click",
@@ -93,7 +93,7 @@ intermedio.addEventListener("click",
                 bombe.push(casuali);
             }
           } console.log(bombe);
-          bombe = [];
+         
     }
 );
 difficile.addEventListener("click",
@@ -108,7 +108,7 @@ difficile.addEventListener("click",
                 bombe.push(casuali);
             }
           } console.log(bombe);
-          bombe = [];
+         
     }
 );
 
