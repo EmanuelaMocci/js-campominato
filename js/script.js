@@ -38,6 +38,7 @@ while (bombe.length < numeroBombe) {
 
 function griglia(celle){
 
+    document.getElementById("contenitore").innerHTML = "";
     for (var i = 1; i <= celle; i++) {
         document.getElementById("contenitore").innerHTML += `<div class="quadrato">${i}</div>`; // Template literal
     }
