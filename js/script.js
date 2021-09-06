@@ -22,17 +22,6 @@ var caselle = 100;
 var termine = caselle - numeroBombe;
 
 
-while (bombe.length < numeroBombe) {
-    // genero un numero casuale
-    var casuali = randomNumeri(1, caselle);
-    // se non e' incluso nell'array bome allora lo pusho dentro
-    if (bombe.includes(casuali) == false){
-        bombe.push(casuali);
-    }
-  } console.log(bombe);
-
-
-
 // In seguito il giocatore clicca sulle celle numerate (non può cliccare più volte sulla stessa cella)
 // La partita termina quando il giocatore clicca su un numero “vietato” o clicca su tutte le celle che non sono delle bombe.
 
@@ -81,18 +70,45 @@ facile.addEventListener("click",
     function() {
         celle = 100;
         griglia(celle);
+        while (bombe.length < numeroBombe) {
+            // genero un numero casuale
+            var casuali = randomNumeri(1, 100);
+            // se non e' incluso nell'array bome allora lo pusho dentro
+            if (bombe.includes(casuali) == false){
+                bombe.push(casuali);
+            }
+          } console.log(bombe);
+          bombe = [];
     }
 );
 intermedio.addEventListener("click",
     function() {
         celle = 80;
         griglia(celle);
+        while (bombe.length < numeroBombe) {
+            // genero un numero casuale
+            var casuali = randomNumeri(1, celle);
+            // se non e' incluso nell'array bome allora lo pusho dentro
+            if (bombe.includes(casuali) == false){
+                bombe.push(casuali);
+            }
+          } console.log(bombe);
+          bombe = [];
     }
 );
 difficile.addEventListener("click",
     function() {
         celle = 50;
         griglia(celle);
+        while (bombe.length < numeroBombe) {
+            // genero un numero casuale
+            var casuali = randomNumeri(1, celle);
+            // se non e' incluso nell'array bome allora lo pusho dentro
+            if (bombe.includes(casuali) == false){
+                bombe.push(casuali);
+            }
+          } console.log(bombe);
+          bombe = [];
     }
 );
 
