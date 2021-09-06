@@ -70,6 +70,7 @@ facile.addEventListener("click",
     function() {
         celle = 100;
         griglia(celle);
+        bombe = [];
         while (bombe.length < numeroBombe) {
             // genero un numero casuale
             var casuali = randomNumeri(1, celle);
@@ -85,6 +86,7 @@ intermedio.addEventListener("click",
     function() {
         celle = 80;
         griglia(celle);
+        bombe = [];
         while (bombe.length < numeroBombe) {
             // genero un numero casuale
             var casuali = randomNumeri(1, celle);
@@ -100,6 +102,7 @@ difficile.addEventListener("click",
     function() {
         celle = 50;
         griglia(celle);
+        bombe = [];
         while (bombe.length < numeroBombe) {
             // genero un numero casuale
             var casuali = randomNumeri(1, celle);
